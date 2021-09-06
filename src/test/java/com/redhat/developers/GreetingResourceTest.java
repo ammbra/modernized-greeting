@@ -1,25 +1,21 @@
 package com.redhat.developers;
 
 import io.quarkus.test.junit.QuarkusTest;
-import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
-import javax.swing.*;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 public class GreetingResourceTest {
 
     @Test
-    public void testCreate() {
-        Message message = new Message();
-        given().contentType(ContentType.JSON).body(message)
-          .when().post("/messages")
+    public void testHelloEndpoint() {
+        given()
+          .when().get("/hello")
           .then()
              .statusCode(200)
-             .body(notNullValue());
+             .body(is("Hello RESTEasy"));
     }
 
 }
