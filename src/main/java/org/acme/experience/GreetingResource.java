@@ -1,4 +1,4 @@
-package com.redhat.developers;
+package org.acme.experience;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
