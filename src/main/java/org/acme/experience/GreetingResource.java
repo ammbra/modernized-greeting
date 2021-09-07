@@ -1,4 +1,4 @@
-package com.redhat.developers;
+package org.acme.experience;
 
 import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;

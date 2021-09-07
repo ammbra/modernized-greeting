@@ -1,4 +1,4 @@
-package com.redhat.developers;
+package org.acme.experience;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
